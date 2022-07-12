@@ -1,10 +1,11 @@
 import "./index.css";
-import { Suspense, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import {Suspense, useRef} from "react";
+import {Canvas} from "@react-three/fiber";
+import {OrbitControls, useGLTF} from "@react-three/drei";
 import ModelLong from "./ModelLong";
 import ModelSmall from "./ModelSmall";
 import ModelStraight from "./ModelStraight";
+import Tags from "./Tags/Tags";
 
 // import Model2 from "./Model2";
 
@@ -15,10 +16,6 @@ license: CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
 source: https://sketchfab.com/3d-models/railway-ca1cc6ea0ae84816882cf790cb980aec
 title: Railway
 */
-
-
-
-
 
 
 // https://github.com/CesiumGS/gltf-pipeline
@@ -44,23 +41,28 @@ https://github.com/CesiumGS/gltf-pipeline:
 // Change color : https://www.youtube.com/watch?v=2jwqotdQmdQ
 
 function App() {
-  return (
-    <div className="App">
-        <div className="wrapper">
-            <Canvas>
-                <Suspense fallback={null}>
-                    <ambientLight/>
-                    <spotLight intensity={1.2} angle={0.1} penumbra={1} position={[10,15,10]} castShadow/>
-                    <pointLight intensity={0.9} position={[2,2,2]}/>
-                    <ModelSmall position={[10, 0, -10]}>
-                        <ModelStraight position={[10, 0, -10]}/>
-                    </ModelSmall>
-                    <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} enabled={true}/>
-                </Suspense>
-            </Canvas>
-        </div>
-        </div>
-  );
+    return (
+        <>
+            <div className="App">
+                <div className="wrapper">
+                    <Canvas>
+                        <Suspense fallback={null}>
+                            <ambientLight/>
+                            <spotLight intensity={1.2} angle={0.1} penumbra={1} position={[10,15,10]} castShadow/>
+                            <pointLight intensity={0.9} position={[2,2,2]}/>
+                            <ModelSmall position={[10, 0, -10]}/>
+                            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} enabled={true}/>
+                        </Suspense>
+                    </Canvas>
+                </div>
+                    <div className="tagDiv">
+                        <Tags/>
+                </div>
+
+            </div>
+        </>
+
+    );
 }
 
 export default App;

@@ -29,16 +29,26 @@
 
 }
 
-.product-canvas {
-  width: 200vw;
-  height: 100%;
-  background:white;
-  box-shadow:  10px 15px 15px 6px #3891b4;
-  border-radius: 0px;
-  margin-bottom:20px
+/*.product-canvas {*/
+/*  width: 200vw;*/
+/*  height: 100%;*/
+/*  background:white;*/
+/*  box-shadow:  10px 15px 15px 6px #3891b4;*/
+/*  border-radius: 0px;*/
+/*  margin-bottom:20px*/
 
+/*}*/
+.tagDiv{
+  margin-top: 2vh;
+  margin-left: 2vw;
+  height: 60vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color:black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 /*.colors {*/
 /*display:flex;*/
 /*flex-direction:row;*/
