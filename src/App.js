@@ -6,6 +6,7 @@ import ModelLong from "./ModelLong";
 import ModelSmall from "./ModelSmall";
 import ModelStraight from "./ModelStraight";
 import Tags from "./Tags/Tags";
+import Modelsmallcopy from "./Modelsmallcopy";
 
 // import Model2 from "./Model2";
 
@@ -44,21 +45,23 @@ function App() {
     return (
         <>
             <div className="App">
+                <div className="sideBySide">
                 <div className="wrapper">
                     <Canvas>
                         <Suspense fallback={null}>
                             <ambientLight/>
-                            <spotLight intensity={1.2} angle={0.1} penumbra={1} position={[10,15,10]} castShadow/>
-                            <pointLight intensity={0.9} position={[2,2,2]}/>
-                            <ModelSmall position={[10, 0, -10]}/>
+                            <spotLight intensity={0.8} angle={0.1} penumbra={1} position={[10, 15, 10]} />
+                            <pointLight intensity={0.8} position={[2, 2, 2]}/>
+                            <Modelsmallcopy position={[10, 0, -10]}/>
+                            {/*<ModelSmall position={[10, 0, -10]}/>*/}
                             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} enabled={true}/>
                         </Suspense>
                     </Canvas>
                 </div>
-                    <div className="tagDiv">
-                        <Tags/>
+                <div className="tagDiv">
+                    <Tags/>
                 </div>
-
+            </div>
             </div>
         </>
 

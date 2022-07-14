@@ -3,7 +3,10 @@
   padding: 0;
  
 }
-
+.sideBySide{
+  display: flex;
+  flex-direction: row;
+}
 .wrapper {
   margin-top: 20vh;
   margin-bottom: 40vh;

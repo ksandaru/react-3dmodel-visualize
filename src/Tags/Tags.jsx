@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState, useRef} from "react";
 import PropTypes from "prop-types";
 //import {connect} from "react-redux";
 //import Spinner from "../layout/Spinner";
@@ -8,17 +8,19 @@ import TagItem from "./TagItem";
 
 
 const Tags = () => {
-    const [tags, setTags] = useState([])
-    useEffect(() => {
-        const getResults = async ()=> {
-            const {data: response} = await axios.get('http://localhost:8081/api/users/get');
-            setTags(response.data);
-            console.log(response.data);
+    const [data, setData] = useState([])
+    const [flag, setFlag] = useState(true)
 
-        }
+    const getResults = async () => {
+        setTimeout(() => setFlag(!flag), 2000)
+        const {data: response} = await axios.get('http://localhost:8081/api/users/get');
+        setData(response.data);
+
+    }
+
+    useEffect(() => {
         getResults();
-        // console.log(tags);
-    }, [])
+    }, [flag])
     return (
         <Fragment>
             <div>
@@ -34,7 +36,7 @@ const Tags = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {tags.map(tag => <TagItem key={tag.id} tag={tag}/>)}
+                    {data.map(tag => <TagItem key={tag.id} tag={tag}/>)}
                     </tbody>
                 </table>
             </div>
