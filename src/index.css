@@ -31,6 +31,14 @@
   background-color:  #6cc2ce;
 
 }
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
 
 /*.product-canvas {*/
 /*  width: 200vw;*/
