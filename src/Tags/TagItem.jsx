@@ -6,16 +6,16 @@ import Moment from "react-moment";
 //import {Link} from "react-router-dom";
 //import Moment from "react-moment";
 
-const TagItem = ({ tag: {id, fullName, status, nic, district, city}}) => {
+const TagItem = ({ tag: {id, uhfId, status, locationId, updatedAt, createdAt}}) => {
     return (
         <Fragment>
             <tr>
                 <td>{id}</td>
-                <td>{fullName}</td>
+                <td>{uhfId}</td>
                 <td>{status}</td>
-                <td>{nic}</td>
-                <td>{district}</td>
-                <td>{city}</td>
+                <td>{locationId}</td>
+                <td>{updatedAt}</td>
+                <td>{createdAt}</td>
                 {/*<td><Moment format='MMMM Do YYYY, h:mm a'>{date}</Moment></td>*/}
             </tr>
         </Fragment>

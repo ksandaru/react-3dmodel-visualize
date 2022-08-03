@@ -13,30 +13,32 @@ const Tags = () => {
 
     const getResults = async () => {
         setTimeout(() => setFlag(!flag), 2000)
-        const {data: response} = await axios.get('http://localhost:8081/api/users/get');
+        const {data: response} = await axios.get('http://localhost:8081/api/uhftags');
         setData(response.data);
+        console.log(response.data)
 
     }
-
     useEffect(() => {
         getResults();
     }, [flag])
+
+
     return (
         <Fragment>
             <div>
-                <table className="table table-hover">
+                <table className="table table-hover table-dark">
                     <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">FullName</th>
+                        <th scope="col">EPC(UHFID)</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Nic</th>
-                        <th scope="col">District</th>
-                        <th scope="col">city</th>
+                        <th scope="col">LocationID</th>
+                        <th scope="col">Last Update</th>
+                        <th scope="col">CreatedAt</th>
                     </tr>
                     </thead>
                     <tbody>
-                    {data.map(tag => <TagItem key={tag.id} tag={tag}/>)}
+                    {data.map(tag => <TagItem key={tag.id} tag={tag} name="kamnajd" />)}
                     </tbody>
                 </table>
             </div>

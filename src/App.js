@@ -1,13 +1,6 @@
 import "./index.css";
-import {Suspense, useRef} from "react";
-import {Canvas} from "@react-three/fiber";
-import {OrbitControls, useGLTF} from "@react-three/drei";
-import ModelLong from "./ModelLong";
-import ModelSmall from "./ModelSmall";
-import ModelStraight from "./ModelStraight";
+import Railway from "./Railway/Railway";
 import Tags from "./Tags/Tags";
-import Modelsmallcopy from "./Modelsmallcopy";
-
 // import Model2 from "./Model2";
 
 /*
@@ -42,27 +35,26 @@ https://github.com/CesiumGS/gltf-pipeline:
 // Change color : https://www.youtube.com/watch?v=2jwqotdQmdQ
 
 function App() {
+
+    // const ref = useRef(null);
+    //
+    // useEffect(() => {
+    //     if (ref) {
+    //         ref.current.click()
+    //     }
+    // })
+
     return (
         <>
             <div className="App">
                 <div className="sideBySide">
-                <div className="wrapper">
-                    <Canvas>
-                        <Suspense fallback={null}>
-                            <ambientLight/>
-                            <spotLight intensity={0.8} angle={0.1} penumbra={1} position={[10, 15, 10]} />
-                            <pointLight intensity={0.8} position={[2, 2, 2]}/>
-                            <Modelsmallcopy position={[10, 0, -10]}/>
-                            {/*<ModelSmall position={[10, 0, -10]}/>*/}
-                            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} enabled={true}/>
-                        </Suspense>
-                    </Canvas>
-                </div>
-                <div className="tagDiv">
-                    <Tags/>
+                    <Railway/>
+                    <div className="tagDiv">
+                        <Tags/>
+                    </div>
                 </div>
             </div>
-            </div>
+
         </>
 
     );

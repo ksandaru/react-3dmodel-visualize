@@ -9,10 +9,10 @@
 }
 .wrapper {
   margin-top: 20vh;
-  margin-bottom: 40vh;
-  margin-left: 2vw;
-  height: 60vh;
-  width: 50vw;
+  margin-bottom: 20vh;
+  margin-left: 0.2vw;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   vertical-align: center;
   align-items: center;
@@ -51,9 +51,9 @@
 /*}*/
 .tagDiv{
   margin-top: 2vh;
-  margin-left: 2vw;
+  margin-left: 10vw;
   height: 60vh;
-  width: 60vw;
+  width: 40vw;
   display: flex;
   justify-content: center;
   background-color: white;
