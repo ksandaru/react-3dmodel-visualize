@@ -12,8 +12,8 @@ const Tags = () => {
     const [flag, setFlag] = useState(true)
 
     const getResults = async () => {
-        setTimeout(() => setFlag(!flag), 2000)
-        const {data: response} = await axios.get('http://localhost:8081/api/uhftags');
+        setTimeout(() => setFlag(!flag), 1000)
+        const {data: response} = await axios.get('https://ugp-foe-api.herokuapp.com/api/uhftags');
         setData(response.data);
         console.log(response.data)
 

@@ -1,6 +1,8 @@
 import "./index.css";
 import Railway from "./Railway/Railway";
 import Tags from "./Tags/Tags";
+import NavBar from "./NavBar/NavBar";
+import RailwayNumbered from "./Railway/RailwayNumbered";
 // import Model2 from "./Model2";
 
 /*
@@ -47,8 +49,9 @@ function App() {
     return (
         <>
             <div className="App">
+                <NavBar/>
                 <div className="sideBySide">
-                    <Railway/>
+                    <RailwayNumbered/>
                     <div className="tagDiv">
                         <Tags/>
                     </div>
