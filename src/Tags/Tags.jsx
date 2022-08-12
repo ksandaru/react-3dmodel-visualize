@@ -25,7 +25,7 @@ const Tags = () => {
 
     return (
         <Fragment>
-            <div>
+            <div className="tagDiv">
                 <table className="table table-hover table-dark">
                     <thead>
                     <tr>

@@ -16,7 +16,7 @@ const NavBar = () => {
                             <a className="nav-link" href="#">Features</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <a className="nav-link" href="#">Visualize</a>
                         </li>
                     </ul>
                     <span className="navbar-text">
