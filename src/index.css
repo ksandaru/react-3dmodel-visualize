@@ -8,7 +8,9 @@
 }
 .sideBySide{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  vertical-align: center;
+
 }
 .wrapper {
   margin-top: 20vh;
@@ -58,6 +60,9 @@
   height: 60vh;
   width: 40vw;
   display: flex;
+  align-self: center;
+  horiz-align: center;
+  align-content: center;
   justify-content: center;
   background-color: white;
   color:black;
